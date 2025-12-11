@@ -76,5 +76,4 @@ markdown_extensions:
 
 nav:
 - Home: index.md
-- API Reference: api.md
 - Provenance: provenance/chicago_contracts.prov.yaml

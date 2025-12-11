@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "generatedAt": "2025-12-11T00:00:00Z",
+  "datasets": [
+    {
+      "id": "chicago_contracts_vendors_sample_20k",
+      "title": "Chicago Contracts Vendor Name Identity Sample (20k rows)",
+      "description": "Subset of the Chicago contracts dataset, focusing on vendor identity strings for SNFEI testing.",
+      "path": "data-out/chicago_contracts_vendors_sample_20k.csv",
+      "records": 20000,
+      "schema": null,
+      "citation": "City of Chicago. Contracts Dataset. https://data.cityofchicago.org/Administration-Finance/Contracts/rsxa-ify5"
+    }
+  ]
+}

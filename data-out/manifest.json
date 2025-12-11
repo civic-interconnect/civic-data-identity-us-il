@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "dataset": "civic-data-identity-us-il",
+  "createdAt": "2025-12-11T00:00:00Z",
+  "source": {
+    "name": "City of Chicago Contracts Dataset",
+    "url": "https://data.cityofchicago.org/Administration-Finance/Contracts/rsxa-ify5",
+    "license": "Public Domain"
+  },
+  "inputs": [
+    "data/raw/chicago_contracts_2025-12-11.csv"
+  ],
+  "outputs": [
+    "data-out/chicago_contracts_vendors_sample_20k.csv"
+  ],
+  "generator": {
+    "script": "src/civic_data_identity_us_il/make_chicago_identity_sample.py",
+    "command": "uv run python src/civic_data_identity_us_il/make_chicago_identity_sample.py"
+  }
+}

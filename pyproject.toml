@@ -36,7 +36,9 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [ # Add all to deptry ignores
+  "build",
   "pre-commit",
+  "pyright",
   "pytest",
   "pytest-cov",
   "pytest-env",
@@ -116,7 +118,9 @@ package_module_name_map = {PyYAML = "yaml"  }
 [tool.deptry.per_rule_ignores]
 DEP002 = [
   # Dev dependencies
+  "build",
   "pre-commit",
+  "pyright",
   "pytest",
   "pytest-cov",
   "pytest-env",
