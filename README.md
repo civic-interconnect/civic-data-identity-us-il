@@ -1,5 +1,12 @@
 # civic-data-identity-us-il
 
+[![PyPI](https://img.shields.io/pypi/v/civic-data-identity-us-il.svg)](https://pypi.org/project/civic-data-identity-us-il/)
+[![Python versions](https://img.shields.io/pypi/pyversions/civic-data-identity-us-il.svg)](https://pypi.org/project/civic-data-identity-us-il/)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![CI Status](https://github.com/civic-interconnect/civic-data-identity-us-il/actions/workflows/ci-python.yml/badge.svg)](https://github.com/civic-interconnect/civic-data-identity-us-il/actions/workflows/ci-python.yml)
+[![Docs](https://img.shields.io/badge/docs-mkdocs--material-blue)](https://civic-interconnect.github.io/civic-data-identity-us-il/)
+[![Link Check](https://github.com/civic-interconnect/civic-data-identity-us-il/actions/workflows/weekly_link_checker.yml/badge.svg)](https://github.com/civic-interconnect/civic-data-identity-us-il/actions/workflows/weekly_link_checker.yml)
+
 This repository hosts **raw and processed Illinois datasets** used for validating
 entity identity, canonicalization, and adapter behavior in the
 [Civic Interconnect](https://github.com/civic-interconnect/civic-interconnect)

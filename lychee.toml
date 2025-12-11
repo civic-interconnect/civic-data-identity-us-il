@@ -11,7 +11,7 @@ retry_wait_time = 8
 timeout = 30
 
 #############################  Requests  ############################
-user_agent = "civic-interconnect link checker"
+user_agent = "civic-data-identity-us-il link checker"
 # Status codes accepted as OK (strings recommended)
 accept = ["200", "206", "301", "302", "403", "429", "503"]
 
