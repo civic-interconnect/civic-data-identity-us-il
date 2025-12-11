@@ -17,6 +17,14 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.1.1] - 2025-12-11
+
+### Minor
+
+- Update CITATION.cff
+
+---
+
 ## [0.1.0] - 2025-12-11
 
 ### Added
@@ -41,5 +49,6 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
   Tag the repository with `vX.Y.Z` to publish a release.
 - Documentation and badges are updated per tag and aliased to **latest**.
 
-[Unreleased]: https://github.com/civic-interconnect/civic-interconnect/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/civic-interconnect/civic-interconnect/releases/tag/v0.0.1
+[Unreleased]: https://github.com/civic-interconnect/civic-interconnect/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/civic-interconnect/civic-interconnect/releases/tag/v0.1.1
+[0.1.0]: https://github.com/civic-interconnect/civic-interconnect/releases/tag/v0.1.0
