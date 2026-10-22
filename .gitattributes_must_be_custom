@@ -1,0 +1,11 @@
+# ============================================================
+# .gitattributes_must_be_custom
+# ============================================================
+# Updated: 2026-10-22
+# INCLUDE THIS AT THE END of .gitattributes
+
+# === CUSTOM DATASETS ===
+
+# Preserve the exact bytes of the committed datasets.
+data/raw/** -text
+data/identity/** -text

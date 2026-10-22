@@ -1,0 +1,31 @@
+# ============================================================
+# prek.toml_must_be_custom
+# ============================================================
+# Updated: 2026-10-22
+
+# Apply these changes to the EXISTING hook definitions.
+#
+# WHY: Preserve original dataset bytes.
+# Formatting hooks must not modify data/raw/ or data/identity/.
+
+[[repos.hooks]]
+id = "trailing-whitespace"
+name = "A1) Clean trailing whitespace (per .editorconfig)"
+args = ["--markdown-linebreak-ext=md"]
+# WHY: Preserves markdown double-space line breaks
+exclude = '^data/(raw|identity)/'
+# CUSTOM
+
+[[repos.hooks]]
+id = "end-of-file-fixer"
+name = "A2) End files with a newline (per .gitattributes)"
+exclude = '^data/(raw|identity)/'
+# CUSTOM
+
+[[repos.hooks]]
+id = "mixed-line-ending"
+name = "A3) Normalize line endings to LF before linters"
+args = ["--fix=lf"]
+exclude = '(\.(bat|cmd)$|^data/(raw|identity)/)'
+# WHY: Windows batch scripts use CRLF line endings.
+# CUSTOM: Exclude raw and identity data directories from mixed-line-ending normalization.

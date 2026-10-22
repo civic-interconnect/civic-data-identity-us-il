@@ -1,0 +1,19 @@
+# ============================================================
+# .editorconfig_must_be_custom
+# ============================================================
+# Updated: 2026-10-22
+# INCLUDE THIS AT THE END of .editorconfig
+
+# === CUSTOM DATASETS ===
+
+# Preserve original dataset formatting.
+[data/raw/**]
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+
+# Preserve published sample formatting.
+[data/identity/**]
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset

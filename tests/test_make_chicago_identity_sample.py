@@ -48,7 +48,9 @@ def test_make_sample_creates_expected_rows(tmp_path: Path) -> None:
     assert list(df_out["Award Amount"]) == ["100", "200"]
 
 
-def test_make_sample_truncates_when_requested_more_than_available(tmp_path: Path) -> None:
+def test_make_sample_truncates_when_requested_more_than_available(
+    tmp_path: Path,
+) -> None:
     """Request more rows than exist and ensure it falls back to the available count."""
 
     input_path = tmp_path / "chicago_contracts_small.csv"

@@ -1,6 +1,5 @@
 # src/civic_data_identity_us_il/make_chicago_identity_sample.py
-"""
-Generate an identity-focused sample from the Chicago contracts CSV.
+"""Generate an identity-focused sample from the Chicago contracts CSV.
 
 Defaults (when run with no arguments):
 
@@ -26,20 +25,19 @@ Usage examples:
 """
 
 import argparse
-import sys
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Optional, Sequence
+import sys
 
 import pandas as pd
 from pandas.errors import EmptyDataError
-
 
 DEFAULT_ROWS = 20_000
 RAW_PATTERN = "chicago_contracts_*.csv"
 DEFAULT_OUTPUT_NAME = "chicago_contracts_vendors_sample_20k.csv"
 
 
-def find_default_input(raw_dir: Path) -> Optional[Path]:
+def find_default_input(raw_dir: Path) -> Path | None:
     """Find the default input CSV under data/raw.
 
     Strategy:
@@ -52,7 +50,7 @@ def find_default_input(raw_dir: Path) -> Optional[Path]:
     return candidates[-1]
 
 
-def default_paths() -> tuple[Optional[Path], Path]:
+def default_paths() -> tuple[Path | None, Path]:
     """Compute default input and output paths relative to project root."""
     # This file: src/civic_data_identity_us_il/make_chicago_identity_sample.py
     here = Path(__file__).resolve()
@@ -68,7 +66,8 @@ def default_paths() -> tuple[Optional[Path], Path]:
     return default_input, default_output
 
 
-def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
+def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
+    """Parse command-line arguments for generating an identity-focused sample."""
     default_input, default_output = default_paths()
 
     parser = argparse.ArgumentParser(
@@ -119,7 +118,9 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         parser.error(f"Input file does not exist: {args.input}")
 
     if args.output.exists() and not args.overwrite:
-        parser.error(f"Output file already exists: {args.output}\nUse --overwrite to replace it.")
+        parser.error(
+            f"Output file already exists: {args.output}\nUse --overwrite to replace it."
+        )
 
     if args.n_rows <= 0:
         parser.error("--n-rows must be a positive integer.")
@@ -127,7 +128,8 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     return args
 
 
-def main(argv: Optional[Sequence[str]] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
+    """Main entry point."""
     args = parse_args(argv)
 
     # Ensure parent directory exists for output
